@@ -40,7 +40,8 @@ services:
       ovms-network:
         ipv4_address: 172.28.1.20
     depends_on:
-      - ovms-server
+      ovms-server:
+        condition: service_healthy
     links: 
       - ovms-server
     tty:
