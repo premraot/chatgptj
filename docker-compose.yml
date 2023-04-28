@@ -18,6 +18,7 @@ services:
       --model_name gpt-j-6b
       --model_path /onnx
       --plugin_config '{"PERFORMANCE_HINT":"LATENCY","NUM_STREAMS":1}'
+      --target_device GPU
     ports:
       - "9000:9000"
     restart: unless-stopped
