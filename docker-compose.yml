@@ -18,7 +18,7 @@ services:
       --model_name gpt-j-6b
       --model_path /onnx
       --plugin_config '{"PERFORMANCE_HINT":"LATENCY","NUM_STREAMS":1}'
-      --device '/dev/dri'
+      --device /dev/dri
       --group-add '$$(stat -c "%g" /dev/dri/render* | head -n 1) -u $$(id -u):$$(id -g)'
       --target_device GPU
     ports:
