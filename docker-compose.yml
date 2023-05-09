@@ -19,7 +19,7 @@ services:
       --model_path /onnx
       --plugin_config '{"PERFORMANCE_HINT":"LATENCY","NUM_STREAMS":1}'
       --device '/dev/dri'
-      --group-add '$(stat -c "%g" /dev/dri/render* | head -n 1)' -u $(id -u):$(id -g)
+      --group-add $(stat -c "%g" /dev/dri/render* | head -n 1) -u $(id -u):$(id -g)
       --target_device GPU
     ports:
       - "9000:9000"
