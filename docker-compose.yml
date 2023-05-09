@@ -23,7 +23,7 @@ services:
       --target_device GPU
     ports:
       - "9000:9000"
-    restart: unless-stopped
+    restart: always
     expose:
       - "9000"
     networks:
