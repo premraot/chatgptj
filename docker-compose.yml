@@ -13,7 +13,7 @@ networks:
 services:
   ovms-server:
     image: premraotd/chatgptj-dc-server:2.1
-    command: >
+    command: 
       --port 9000
       --model_name gpt-j-6b
       --model_path /onnx
