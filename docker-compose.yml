@@ -12,7 +12,7 @@ networks:
         - subnet: 172.28.0.0/16
 services:
   ovms-server:
-    image: premraotd/chatgptj-dc-server:1.0
+    image: premraotd/chatgptj-dc-server:2.1
     command: >
       --port 9000
       --model_name gpt-j-6b
